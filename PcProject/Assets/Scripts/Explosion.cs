@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlayerStatus : CharacterStatus
+public class Explosion : MonoBehaviour
 {
- 
+    [SerializeField] float timeToDesactive;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        
+        yield return new WaitForSeconds(timeToDesactive);
+        gameObject.SetActive(false);
     }
-    
+
     // Update is called once per frame
     void Update()
     {

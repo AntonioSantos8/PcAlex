@@ -22,4 +22,10 @@ public abstract class CharacterStatus : MonoBehaviour
     {
        
     }
+    protected abstract void Teste1();
+    
+    protected virtual void Teste2()
+    {
+
+    }
 }
