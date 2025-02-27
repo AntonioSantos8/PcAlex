@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+public class Water : MonoBehaviour
 {
-    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
