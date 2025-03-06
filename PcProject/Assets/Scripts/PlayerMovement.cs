@@ -1,41 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.IMGUI.Controls;
 using UnityEngine;
-[RequireComponent(typeof(Rigidbody2D))]
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] float speedX = 5;
-    [SerializeField] float jumpForce = 200;
-    [SerializeField] float swimsForce = 250;
-    float horizontal;
+    float horizontal, vertical;
+    PlayerStatus status;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        status = GetComponent<PlayerStatus>();
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (Input.GetButtonDown("Fire3"))
-        {
-            rb.AddForce(new Vector2(0, -swimsForce));
-        }
-        if (Input.GetButtonDown("Jump"))
-        {
-            rb.AddForce(new Vector2(0, jumpForce));
-        }
+        vertical = Input.GetAxisRaw("Vertical");
     }
-    private void FixedUpdate()// Para o uso da  Fisica
+    private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speedX, rb.velocity.y);
-    }
-    private void LateUpdate() //Posiçao e rotaçao da camera
-    {
-
+        rb.velocity = new Vector2(horizontal, vertical) * status.Speed;
     }
 }

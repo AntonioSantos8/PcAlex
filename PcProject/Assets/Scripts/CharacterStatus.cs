@@ -4,12 +4,12 @@ using UnityEngine;
 
 public abstract class CharacterStatus : MonoBehaviour
 {
-    float life;
     [SerializeField] float lifeMax;
     [SerializeField] float speed;
+    float life;
 
-    public float LifeMax { get => lifeMax; }
-    public float Speed { get => speed; }
+    public float LifeMax { get => lifeMax;}
+    public float Speed { get => speed;}
 
     // Start is called before the first frame update
     void Awake()
@@ -20,12 +20,12 @@ public abstract class CharacterStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
     }
-    protected abstract void Teste1();
-    
-    protected virtual void Teste2()
-    {
 
+    protected abstract void Teste();//Obriga o filho a implementar
+    protected virtual void Teste2()//Permite que o filho sobrescreva
+    {
+        //Possui corpo executável
     }
 }
