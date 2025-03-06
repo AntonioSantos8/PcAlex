@@ -32,7 +32,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()//Física
     {
-        rb.velocity = new Vector2 (horizontal * speedX, rb.velocity.y);
+
+            rb.velocity = new Vector2 (horizontal * speedX, rb.velocity.y);
     }
     private void LateUpdate()//Câmera
     {
