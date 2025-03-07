@@ -25,8 +25,5 @@ public class CollideAndWin : MonoBehaviour
             winTheGame = true;
         }
     }
-    public void winGame(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
+    
 }
