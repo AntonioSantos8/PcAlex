@@ -590,7 +590,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 354336590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: winGame
+        m_MethodName: WinGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

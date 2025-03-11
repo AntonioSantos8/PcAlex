@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject uiToApear;
     CollideAndWin collide;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void winGame(string sceneName)
+    public void WinGame(string sceneName)
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneName);

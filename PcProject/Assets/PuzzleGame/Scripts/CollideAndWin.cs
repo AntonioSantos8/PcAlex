@@ -26,6 +26,10 @@ public class CollideAndWin : MonoBehaviour
         {
             winTheGame = true;
         }
+        if (collision.CompareTag("Coin"))
+        {
+            winTheGame = true;
+        }
     }
     
 }

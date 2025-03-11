@@ -7,6 +7,7 @@ TagManager:
   - Win
   - Ball
   - Floor
+  - Coin
   layers:
   - Default
   - TransparentFX

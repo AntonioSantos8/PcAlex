@@ -30,6 +30,7 @@ public class Ball : MonoBehaviour
             Destroy(gameObject);
             status.life -= 100;
         }
+        
     }
     void BallForce()
     {
