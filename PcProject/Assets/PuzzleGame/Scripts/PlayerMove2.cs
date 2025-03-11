@@ -27,6 +27,8 @@ public class PlayerMove2 : MonoBehaviour
         {
             Jump();
         }
+
+        Debug.Log(Time.timeScale);
     }
 
     void Move()

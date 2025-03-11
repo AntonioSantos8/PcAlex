@@ -1732,6 +1732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 6723095818284482975, guid: 9fcac8a88fbee4947bf4eab6dd693b77, type: 3}
+  canSpawnBall: 0
 --- !u!4 &354336589
 Transform:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Debug.Log(Time.timeScale);
     }
 
     // Update is called once per frame

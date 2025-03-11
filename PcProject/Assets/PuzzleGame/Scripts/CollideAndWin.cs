@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollideAndWin : MonoBehaviour
 {
-    bool winTheGame;
+    public bool winTheGame;
 
     // Update is called once per frame
     void Update()
@@ -14,6 +14,10 @@ public class CollideAndWin : MonoBehaviour
             GameManager gm = FindObjectOfType<GameManager>();
             gm.uiToApear.SetActive(true);
             Time.timeScale = 0;
+        }
+        if(Time.timeScale == 0)
+        {
+            winTheGame = false;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

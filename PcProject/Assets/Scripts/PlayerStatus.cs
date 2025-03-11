@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStatus : CharacterStatus, IDamageable
+public class PlayerStatus2 : CharacterStatus, IDamageable
 {
     
 }

@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject uiToApear;
+    CollideAndWin collide;
     // Start is called before the first frame update
     void Start()
     {
-        
+        collide = GetComponent<CollideAndWin>();
     }
 
     // Update is called once per frame
@@ -18,7 +19,9 @@ public class GameManager : MonoBehaviour
     }
     public void winGame(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
+        SceneManager.LoadScene(sceneName);
+        collide.winTheGame = false;
+        
     }
 }

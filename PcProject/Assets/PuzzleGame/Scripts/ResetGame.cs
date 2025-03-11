@@ -20,6 +20,7 @@ public class ResetGame : MonoBehaviour
         if (collision.CompareTag("Ball"))
         {
             SceneManager.LoadScene("Puzzle1");
+            Time.timeScale = 1.0f;
         }
     }
 }
