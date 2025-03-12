@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PointsAndWin : MonoBehaviour
 {
-    int timeToLoose = 20;
+    int timeToLoose = 40;
     public TMP_Text textTimeToLoose;
     CollideAndWin collideAndWin;
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class PointsAndWin : MonoBehaviour
     }
     IEnumerator Loose()
     {
-        while(timeToLoose <= 20)
+        while(timeToLoose <= 40)
         {
             yield return new WaitForSeconds(1);
             timeToLoose--;
@@ -41,6 +41,7 @@ public class PointsAndWin : MonoBehaviour
             if(timeToLoose == 0)
             {
                 SceneManager.LoadScene("Puzzle3");
+                PointsFase3.pontos = 0;
             }
         }
 
