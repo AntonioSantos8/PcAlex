@@ -8,7 +8,7 @@ public class PointsAndWin : MonoBehaviour
 {
     int timeToLoose = 40;
     public TMP_Text textTimeToLoose;
-    CollideAndWin collideAndWin;
+    
     // Start is called before the first frame update
     
     void Start()
@@ -27,8 +27,8 @@ public class PointsAndWin : MonoBehaviour
     {
         if (PointsFase3.pontos >= 10)
         {
-            collideAndWin = FindObjectOfType<CollideAndWin>();
-            collideAndWin.winTheGame = true;
+            WinTheGame.winTheGame = true;
+            Time.timeScale = 0;
         }
     }
     IEnumerator Loose()

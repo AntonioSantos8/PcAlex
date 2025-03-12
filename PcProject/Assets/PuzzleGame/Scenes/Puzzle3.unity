@@ -3097,8 +3097,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1993232307}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: WinGame
-        m_Mode: 5
+        m_MethodName: EndGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3519,7 +3519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: End Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3655,7 +3655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9877a641d311d644eb72c167c83009e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winTheGame: 0
 --- !u!114 &1993232311
 MonoBehaviour:
   m_ObjectHideFlags: 0
