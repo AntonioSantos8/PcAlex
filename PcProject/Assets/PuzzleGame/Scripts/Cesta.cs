@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cesta : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,6 @@ public class Cesta : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+       
     }
 }

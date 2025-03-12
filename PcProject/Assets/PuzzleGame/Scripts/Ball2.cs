@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Ball2 : MonoBehaviour
 {
-    public static int pontos;
     [SerializeField] TMP_Text pontosTxt;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +15,7 @@ public class Ball2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pontosTxt.text = "Pontos: " + pontos.ToString();
+        pontosTxt.text = "Pontos: " + PointsFase3.pontos.ToString();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,6 +27,10 @@ public class Ball2 : MonoBehaviour
     }
     void AumentarPontuacao()
     {
-        pontos++;
+        PointsFase3.pontos++;
     }
+}
+public static class PointsFase3
+{
+    public static int pontos;
 }
