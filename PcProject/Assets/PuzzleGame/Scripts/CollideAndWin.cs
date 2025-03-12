@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollideAndWin : MonoBehaviour
 {
-    public bool winTheGame;
+    public static bool winTheGame;
 
     // Update is called once per frame
     void Update()
