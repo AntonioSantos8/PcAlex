@@ -6,7 +6,7 @@ public class SpawnObject : MonoBehaviour
     [Header("Ball")]
     public GameObject ball;
     public bool canSpawnBall;
-    float topScreen = 100f;
+    readonly float topScreen = 170f;
     
     // Start is called before the first frame update
     void Start()
