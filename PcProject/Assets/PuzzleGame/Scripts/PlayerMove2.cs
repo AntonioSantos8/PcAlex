@@ -9,11 +9,14 @@ public class PlayerMove2 : MonoBehaviour
     public float jumpStrength;
     [SerializeField] GameObject jumpTag; 
     Vector2 move;
-    bool isGrounded;
+    public bool isGrounded;
+    bool lookingRight;
+   
 
     // Start is called before the first frame update
     void Start()
     {
+        lookingRight = true;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -34,7 +37,19 @@ public class PlayerMove2 : MonoBehaviour
     void Move()
     {
         move.x = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(move.x * moveSpeed, rb.velocity.y); 
+        rb.velocity = new Vector2(move.x * moveSpeed, rb.velocity.y);
+       
+            if (lookingRight && move.x < 0 || !lookingRight && move.x > 0) 
+        {
+            lookingRight = !lookingRight;
+            Vector3 newScale = transform.localScale;
+            newScale.x *= -1;
+            transform.localScale = newScale; 
+        
+        }
+
+
+        
     }
 
     void Jump()

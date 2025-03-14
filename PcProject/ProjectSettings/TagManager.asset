@@ -8,6 +8,7 @@ TagManager:
   - Ball
   - Floor
   - Coin
+  - Ground
   layers:
   - Default
   - TransparentFX
