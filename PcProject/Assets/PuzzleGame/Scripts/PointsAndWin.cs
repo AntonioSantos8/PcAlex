@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class PointsAndWin : MonoBehaviour
 {
+    public AudioClip winAudio;
+    AudioSource winAudioSource;
     int timeToLoose = 40;
     public TMP_Text textTimeToLoose;
+    
     
     // Start is called before the first frame update
     
     void Start()
     {
+        winAudioSource = GetComponent<AudioSource>();
         textTimeToLoose.text = "Time to loose: " + timeToLoose.ToString();
         StartCoroutine(Loose());
     }
@@ -25,11 +29,16 @@ public class PointsAndWin : MonoBehaviour
     }
     void Win()
     {
-        if (PointsFase3.pontos >= 10)
+        if (PointsFase3.pontos >= 10 && WinTheGame.podeTOfa)
         {
+            
             WinTheGame.winTheGame = true;
             Time.timeScale = 0;
+
+            winAudioSource.PlayOneShot(winAudio);
+            WinTheGame.podeTOfa = false;    
         }
+
     }
     IEnumerator Loose()
     {
